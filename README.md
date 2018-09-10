@@ -10,7 +10,8 @@
 ### KanColleTwitter.php
 主要是获取官方Twitter的内容，改改也可以拿去拉其它的Twitter。
 
-使用前需要修改PHP中$settings的access_token，获取token方法请前往[Twitter开发者页面](https://developer.twitter.com)。
+#### 使用前需要
+1.修改PHP中$settings的access_token，获取token方法请前往[Twitter开发者页面](https://developer.twitter.com)。
 
 ```php
 $settings = array( //To-do
@@ -18,6 +19,21 @@ $settings = array( //To-do
 	'oauth_access_token_secret' => "23333",
 	'consumer_key' => "23333",
 	'consumer_secret' => "23333"
+);
+```
+
+2.修改TwitterAPI.php中performRequest函数$options内CURLOPT_PROXY与CURLOPT_PROXYPORT两项，将其改为自己的HTTP代理服务器，否则无法访问Twitter(海外服务器可将这两行删除)。
+
+```php
+$options = $curlOptions + array(
+    CURLOPT_HTTPHEADER => $header,
+    CURLOPT_HEADER => false,
+    CURLOPT_URL => $this->url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT => 10,
+	CURLOPT_PROXY => "127.0.0.1", //To-do: Edit proxy server
+	CURLOPT_PROXYPORT => 8088, //To-do: Edit port
+	CURLOPT_SSL_VERIFYPEER => false
 );
 ```
 
