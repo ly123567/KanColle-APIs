@@ -31,9 +31,9 @@ $options = $curlOptions + array(
     CURLOPT_URL => $this->url,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT => 10,
-	CURLOPT_PROXY => "127.0.0.1", //To-do: Edit proxy server
-	CURLOPT_PROXYPORT => 8088, //To-do: Edit port
-	CURLOPT_SSL_VERIFYPEER => false
+    CURLOPT_PROXY => "127.0.0.1", //To-do: Edit proxy server
+    CURLOPT_PROXYPORT => 8088, //To-do: Edit port
+    CURLOPT_SSL_VERIFYPEER => false
 );
 ```
 
