@@ -13,12 +13,12 @@
 使用前需要修改PHP中$settings的access_token，获取token方法请前往[Twitter开发者页面](https://developer.twitter.com)。
 
 ```php
-	$settings = array( //To-do
-		'oauth_access_token' => "23333",
-		'oauth_access_token_secret' => "23333",
-		'consumer_key' => "23333",
-		'consumer_secret' => "23333"
-	);
+$settings = array( //To-do
+	'oauth_access_token' => "23333",
+	'oauth_access_token_secret' => "23333",
+	'consumer_key' => "23333",
+	'consumer_secret' => "23333"
+);
 ```
 
 #### 参数列表
