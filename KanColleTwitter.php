@@ -2,7 +2,7 @@
 	require_once( 'TwitterAPI.php' );
 
 	$user_id = $_GET['username'];
-	$json = json_decode(twitter_get("https://api.twitter.com/1.1/statuses/user_timeline.json", '?count=1&screen_name=' . $user_id));
+	$json = json_decode(twitter_get("https://api.twitter.com/1.1/statuses/user_timeline.json", '?count=3&exclude_replies=1&include_rts=1&screen_name=' . $user_id));
 	$tweet_id = $json[0]->id_str;
 	$text = $json[0]->text;
 	$link = $json[0]->entities->urls[0]->url;
