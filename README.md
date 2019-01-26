@@ -2,7 +2,7 @@
 一些舰C玩家可能有用的中文API接口（PHP语言）
 
 ## 使用组件
-[TwitterAPIExchange](https://github.com/J7mbo/twitter-api-php) [MIT Lisence](https://github.com/J7mbo/twitter-api-php/raw/master/LICENSE.md)
+[TwitterAPIExchange](https://github.com/J7mbo/twitter-api-php) [MIT License](https://github.com/J7mbo/twitter-api-php/raw/master/LICENSE.md)
 
 ## 简要说明
 此API是闲着没事摸鱼时候糊的，所以部分地方可能看起来不是那么符合API标准(比如有些地方嫌写JSON麻烦，直接返回了文字之类- -)，请各位dalao别笑话我Orz
@@ -46,7 +46,7 @@ username: Twitter用户名，如KanColle_STAFF
 type: 若为1，则获取其头像，否则获取其第一条Tweet
 ```
 
-输出参数：(JSON格式)
+输出格式：(JSON格式)
 
 ```
 text: Tweet内容文字(完整版,非摘要)
@@ -56,7 +56,7 @@ image: 该Twitter的头像原图URL
 ```
 
 ### KanColleEvent.php
-一个从[KCWIKI](https://zh.kcwiki.org/wiki/)爬取活动信息(航程图、黑板翻译、简易攻略、通关奖励)的小接口。
+一个从[KCWIKI](https://zh.kcwiki.org/wiki/)抓取活动信息(航程图、简易攻略、通关奖励)的小接口。
 
 输入参数：
 
@@ -65,4 +65,30 @@ mission: 关卡，即E-X，请求信息用
 type: 请求内容，详细参数见PHP中switch
 ```
 
-输出: 比较懒直接输出文字了Orz
+输出格式: 比较懒直接输出文字了Orz
+
+### KanColleTime.php
+一个从[KCWIKI](https://zh.kcwiki.org/wiki/)抓取舰娘报时语音文件及其中日语台词的接口。
+
+输入参数：
+
+```
+name: 舰娘名称，以KCWIKI中URL显示的为准
+```
+
+输出格式：(JSON数组格式)
+
+```
+hour: 报时对应的小时数(0-23)
+jp: 报时台词日文版
+cn: 报时台词中文版
+audio: 报时语音文件URL
+filename: 报时语音文件名
+```
+
+### KanColleImprovement
+生成一个今日改修表的图片，包括今日可改修的装备名及相应秘书舰(秘书舰只显示其中一个)。
+
+输入参数：无
+
+输出格式：PNG图片格式
