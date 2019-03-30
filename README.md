@@ -2,7 +2,7 @@
 一些舰C玩家可能有用的中文API接口（PHP语言）
 
 ## 使用组件
-[TwitterAPIExchange](https://github.com/J7mbo/twitter-api-php) [MIT License](https://github.com/J7mbo/twitter-api-php/raw/master/LICENSE.md)
+[TwitterAPIExchange](https://github.com/J7mbo/twitter-api-php) ([MIT License](https://github.com/J7mbo/twitter-api-php/raw/master/LICENSE.md))
 
 ## 简要说明
 此API是闲着没事摸鱼时候糊的，所以部分地方可能看起来不是那么符合API标准(比如有些地方嫌写JSON麻烦，直接返回了文字之类- -)，请各位dalao别笑话我Orz
